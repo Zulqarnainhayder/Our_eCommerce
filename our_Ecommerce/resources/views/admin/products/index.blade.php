@@ -34,7 +34,7 @@
                 <th>Price</th>
                 <th>Discount Price</th>
                 <th>Thumbnail</th>
-                <th>Date Created</th>
+{{--                <th>Date Created</th>--}}
                 <th>Actions</th>
             </tr>
             </thead>
@@ -55,15 +55,15 @@
                                 <strong>{{"product"}}</strong>
                             @endif
                         </td>
-                        <td>${{$product->price}}</td>
-                        <td>${{$product->discount_price}}</td>
+                        <td style="font-weight: bold;color: #80bb01">Rs-{{$product->price}}</td>
+                        <td style="font-weight: bold;color: #80bb01">Rs-{{$product->discount_price}}</td>
                         <td><img src="{{  asset('../storage/app/public/'.$product->thumbnail) }} " alt="{{$product->title}}" class="img-responsive" height="50"/></td>
                         @if($product->trashed())
                             <td>{{$product->deleted_at}}</td>
                             <td><a class="btn btn-info btn-sm" href="{{route('admin.product.recover',$product->id)}}">Restore</a>
                             </td>
                         @else
-                            <td>{{$product->created_at}}</td>
+{{--                            <td>{{$product->created_at}}</td>--}}
                             <td><a class="btn btn-info btn-sm" href="{{route('admin.product.edit',$product->slug)}}">Edit</a> | <a id="trash-product-{{$product->id}}" class="btn btn-warning btn-sm" href="{{route('admin.product.remove',$product->slug)}}">Trash</a> | <a class="btn btn-danger btn-sm" href="javascript:;" onclick="confirmDelete('{{$product->id}}')">Delete</a>
                                 <form id="delete-product-{{$product->id}}" action="{{ route('admin.product.destroy', $product->slug) }}" method="POST" style="display: none;">
 

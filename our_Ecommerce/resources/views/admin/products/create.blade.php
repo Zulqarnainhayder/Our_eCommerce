@@ -52,7 +52,7 @@
                         <label class="form-control-label">Price: </label>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" id="basic-addon1">$</span>
+                                <span class="input-group-text" id="basic-addon1">Rs</span>
                             </div>
                             <input type="number" class="form-control" placeholder="0.00" aria-label="Username" aria-describedby="basic-addon1" name="price" value="{{@$product->price}}" />
                         </div>
@@ -61,7 +61,7 @@
                         <label class="form-control-label">Discount: </label>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" id="basic-addon1">$</span>
+                                <span class="input-group-text" id="basic-addon1">Rs</span>
                             </div>
                             <input type="float" class="form-control" name="discount_price" placeholder="0.00" aria-label="discount_price" aria-describedby="discount" value="{{@$product->discount_price}}" />
                         </div>
