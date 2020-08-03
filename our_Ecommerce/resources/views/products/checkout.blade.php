@@ -8,6 +8,10 @@
         height: 50px !important;
         font-size: 1.9rem !important;
     }
+    .list-group-item{
+        padding: 15px 15px !important;
+        margin-bottom: 0px !important;
+    }
 </style>
 
 @section('content')
@@ -20,7 +24,7 @@
                         <span class="badge badge-secondary badge-pill" style="font-size: 25px;">{{$cart->getTotalQty()}}</span>
                     </h4>
 
-                    <ul class="list-group mb-3 mx-3 shadow-sm">
+                    <ul class="list-group mb-3 shadow-sm">
                         <li class="list-group-item d-flex justify-content-between lh-condensed">
                             <span style="font-size: 20px">Product</span>
                             <span style="font-size: 20px">Subtotal</span>
@@ -34,13 +38,6 @@
                                 <span class="text-muted" style="font-size: 14px;">Rs-{{$product['price']}}</span>
                             </li>
                         @endforeach
-                        {{--                                   <li class="list-group-item d-flex justify-content-between bg-light">--}}
-                        {{--                                    <div class="text-success">--}}
-                        {{--                                      <h6 class="my-0">Promo code</h6>--}}
-                        {{--                                      <small>EXAMPLECODE</small>--}}
-                        {{--                                    </div>--}}
-                        {{--                                    <span class="text-success">-$5</span>--}}
-                        {{--                                  </li>--}}
                         <li class="list-group-item d-flex justify-content-between bg-light">
                             <span style="font-size: 14px">Shipping</span>
                             <span style="font-size: 14px;">Flat Rate: 200</span>
@@ -56,17 +53,6 @@
                     <h4 class="d-flex justify-content-between align-items-center mb-3">
                         <span style="font-size: 16px">Commming Soon</span>
                     </h4>
-
-
-                    {{--                                           <form class="card p-2">--}}
-                    {{--                                              @csrf--}}
-                    {{--                                            <div class="input-group">--}}
-                    {{--                                              <input type="text" class="form-control" placeholder="Promo code">--}}
-                    {{--                                              <div class="input-group-append">--}}
-                    {{--                                                <button type="submit" class="btn btn-secondary">Redeem</button>--}}
-                    {{--                                              </div>--}}
-                    {{--                                            </div>--}}
-                    {{--                                          </form>--}}
                 </div>
                 <div class="col-md-7 order-md-1">
                     <h4 class="mb-3" style="font-size: 30px; font-weight: 800">Billing Address</h4>
