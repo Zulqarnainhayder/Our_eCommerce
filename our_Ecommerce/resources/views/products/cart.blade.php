@@ -107,10 +107,10 @@
                                             <h3 style="font-weight: bold">Total</h3>
                                         </div>
                                         <div class="col-md-6">
-                                            <h4 style="font-weight: bold; text-align: right; color: #80bb01; margin-top: 25px">Shipping+Product price</h4>
+                                            <h4 style="font-weight: bold; text-align: right; color: #80bb01; margin-top: 25px">Shipping+Total price</h4>
                                         </div>
                                     </div>
-                                    <input href="{{route('products.checkout')}}" type="submit" style="background-color: #80bb01; color: white; font-weight: bold; font-size: 18px" class="btn border-1 p-3 px-5" value="Proceed To Checkout">
+                                    <a href="{{route('checkout.index')}}" class="btn" style="background-color: #80bb01; color: white; font-weight: bold; font-size: 18px">Proceed To Checkout</a>
                                 </section>
                             </div>
                         </div>

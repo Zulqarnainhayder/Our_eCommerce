@@ -52,7 +52,6 @@
                 <ul class="nav navbar-nav">
                     <li><a href="{{route('home')}}">Home</a></li>
                     <li><a href="{{route('products.all')}}">Shope</a></li>
-                    <li><a href="">Home</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="{{route("cart.all")}}" class="glyphicon glyphicon-shopping-cart"></a></li>
