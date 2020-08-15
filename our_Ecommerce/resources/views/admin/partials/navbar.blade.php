@@ -7,7 +7,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{{route('admin.order.index')}}">
                 <span data-feather="file"></span>
                 Orders
             </a>
@@ -38,7 +38,7 @@
         <li class="nav-item dropdown">
             <a id="profileDropdown" class="nav-link  @if(request()->url() == route('admin.profile.index')) {{'active'}} @else {{''}} @endif dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span data-feather="users"></span>
-                Customers
+                Profiles
             </a>
             <div class="dropdown-menu" aria-labelledby="categoryDropdown">
                 <a class="dropdown-item" href="{{route('admin.profile.create')}}">Add Profile</a>
@@ -47,9 +47,9 @@
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{{route('admin.customer.index')}}">
                 <span data-feather="layers"></span>
-                Integrations
+                Customers
             </a>
         </li>
     </ul>

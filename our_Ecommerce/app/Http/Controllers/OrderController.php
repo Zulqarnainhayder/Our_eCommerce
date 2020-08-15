@@ -47,7 +47,7 @@ class OrderController extends Controller {
         if (Session::has('cart')) {
             $cart = Session::get('cart');
         }
-        if ($request->shipping_address) {
+        if ($request->shipping_address1) {
                 $customer = [
                     "billing_firstName" => $request->billing_firstName,
                     "billing_lastName" => $request->billing_lastName,
@@ -68,7 +68,7 @@ class OrderController extends Controller {
                 ];
             } else {
                 $customer = [
-                    "billing_firstName" => $request->billing_firstaName,
+                    "billing_firstName" => $request->billing_firstName,
                     "billing_lastName" => $request->billing_lastName,
                     "username"=>$request->username,
                     "email" => $request->email,
@@ -108,7 +108,7 @@ class OrderController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function show(Order $order) {
-        //
+
     }
 
     /**

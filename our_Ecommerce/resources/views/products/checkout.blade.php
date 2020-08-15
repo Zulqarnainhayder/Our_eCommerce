@@ -223,18 +223,9 @@
                             </div>
                         </div>
                         <hr class="mb-4">
-                        {{-- <script src="https://js.stripe.com/v3/"></script> --}}
                         <div class="form-row">
-                            <label for="card-element">
-                                Credit or debit card
-                            </label>
-                            <div id="card-element">
-                                <!-- A Stripe Element will be inserted here. -->
-                            </div>
-
-                            <!-- Used to display form errors. -->
                             <div id="card-errors" role="alert"></div>
-                            <button class="btn btn-primary btn-lg btn-block" type="submit">Paypal Payment</button>
+                            <button class="btn mt-5" style="background-color: #80bb01; color: white; font-weight: bold; font-size: 18px; padding: 10px 50px" type="submit">Proceed To Next</button>
                         </div>
                     </form>
                 </div>

@@ -60,6 +60,8 @@ Route::group(['as' => 'admin.', 'middleware' => ['auth', 'admin'], 'prefix' => '
     Route::resource('product', 'ProductController');
     Route::resource('category', 'CategoryController');
     Route::resource('profile', 'ProfileController');
+    Route::resource('customer', 'CustomerController');
+    Route::resource('order', 'OrdersController');
 });
 Route::get('bydate', function(){
     return \App\User::where('created_at','=', '2019-03-22 12:50:23')->get();
