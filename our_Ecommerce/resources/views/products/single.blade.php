@@ -17,7 +17,7 @@
               <div class="btn-group">
                 <a type="button" class="btn btn-sm btn-outline-secondary">Add to Cart</a>
               </div>
-              <p class="text-muted">9 mins</p>
+{{--              <p class="text-muted">9 mins</p>--}}
             </div>
           </div>
        	</div>

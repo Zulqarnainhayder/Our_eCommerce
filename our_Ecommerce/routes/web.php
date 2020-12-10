@@ -19,14 +19,11 @@ Route::get('test',function ()
 //Route::get('/', function () {
 //    return view('welcome');
 //});
- Route::redirect('/','login');
-Route::resource('checkout', 'OrderController');
-Route::post('paypal', 'OrderController@paypal')->name('checkout.paypal');
-Route::get('returnPaypal', 'OrderController@returnPaypal')->name('process.paypal');
-Route::get('cancelPaypal', 'OrderController@cancelPaypal')->name('cancel.paypal');
+// Route::redirect('/','login');
+Route::resource('/checkout', 'OrderController');
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
 
 Route::group(['as' => 'products.', 'prefix' => 'products'], function () {
     Route::get('/', 'ProductController@show')->name('all');
@@ -63,6 +60,8 @@ Route::group(['as' => 'admin.', 'middleware' => ['auth', 'admin'], 'prefix' => '
     Route::resource('product', 'ProductController');
     Route::resource('category', 'CategoryController');
     Route::resource('profile', 'ProfileController');
+    Route::resource('customer', 'CustomerController');
+    Route::resource('order', 'OrdersController');
 });
 Route::get('bydate', function(){
     return \App\User::where('created_at','=', '2019-03-22 12:50:23')->get();

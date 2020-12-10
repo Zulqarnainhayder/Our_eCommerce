@@ -8,25 +8,27 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="{{asset('css/admin.css')}}">
 </head>
+<style>
+    body{
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    }
+</style>
 <body>
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2">Dashboard</h1>
     </div>
-    <nav class="navbar navbar-light fixed-top bg-light flex-md-nowrap p-0 shadow">
-        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="{{route('admin.dashboard')}}">Company name</a>
-        <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
-        <ul class="navbar-nav px-3">
+    <nav class="navbar navbar-light fixed-top flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-sm-3 col-md-2 mr-0 bg-light" href="{{route('admin.dashboard')}}">Company name</a>
+        <input class="col-md-8 form-control form-control-dark w-100 bg-white" type="text" placeholder="Search" aria-label="Search">
+        <ul class="col-md-2 navbar-nav px-5">
             <li class="nav-item">
-                <a class="btn btn-success btn-sm" href="" role="button" data-toggle="modal" data-target="#myModal" aria-haspopup="true" aria-expanded="false" v-pre>
+                <a style="font-weight: bold;background-color: #80bb01" class="btn btn-success" href="" role="button" data-toggle="modal" data-target="#myModal" aria-haspopup="true" aria-expanded="false" v-pre>
                     {{ Auth::user()->profile->name }} <span></span>
                 </a>
             </li>

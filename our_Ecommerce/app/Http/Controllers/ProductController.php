@@ -56,7 +56,7 @@ class  ProductController extends Controller
     {
         //dd(Session::get('cart'));
         $categories = Category::with('childrens')->get();
-        $products = Product::with('categories')->paginate(3);
+        $products = Product::with('categories')->paginate(9);
         return view('products.all', compact('categories','products'));
     }
 
@@ -72,7 +72,7 @@ class  ProductController extends Controller
         $cart = new Cart($oldCart);
         $cart->addProduct($product, $qty);
         Session::put('cart', $cart);
-        return back()->with('message', "Product $product->title has been successfully added to Cart");
+        return back()->with('message', "$product->title has been successfully added to Cart");
     }
 
     public function cart(){

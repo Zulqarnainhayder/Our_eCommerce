@@ -22,9 +22,6 @@
     .navbar{
         margin-bottom: 0px !important;
     }
-    .container-fluid{
-        padding: 0px !important;
-    }
     .navbar-light .navbar-toggle .icon-bar{
         background-color: lightgreen !important;
     }
@@ -49,19 +46,18 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">WebSiteName</a>
+                <a class="navbar-brand" href="#">Hudabia Trades</a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="{{route('home')}}">Home</a></li>
                     <li><a href="{{route('products.all')}}">Shope</a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#">Home</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{{route("cart.all")}}" class="glyphicon glyphicon-shopping-cart"></a></li>
                     @guest
-                    <li><a href="{{ route('register') }}"><span class="glyphicon glyphicon-user"></span> {{ __('Register') }}</a></li>
-                    <li><a href="{{ route('login') }}"><span class="glyphicon glyphicon-log-in"></span> {{ __('Login') }}</a></li>
+                        <li><a href="{{ route('register') }}"><span class="glyphicon glyphicon-user"></span> {{ __('Register') }}</a></li>
+                        <li><a href="{{ route('login') }}"><span class="glyphicon glyphicon-log-in"></span> {{ __('Login') }}</a></li>
                     @else
                         <li class="nav-item">
                             <a class="" href="" role="button" data-toggle="modal" data-target="#myModal" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -94,7 +90,6 @@
                                             </form>
                                             <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
@@ -105,23 +100,7 @@
         </div>
     </nav>
 </div>
-<div class="container-fluid">
-    <div class="row">
-{{--        <div class="col-md-3">--}}
-{{--            @section('sidebar')--}}
-{{--                @include('layouts.partials.sidebar')--}}
-{{--            @show--}}
-{{--        </div>--}}
-        <div class="col-md-12">
-            @if(session()->has('message'))
-                <p class="alert alert-success">
-                    {{ session()->get('message') }}
-                </p>
-            @endif
-            @yield('content')
-        </div>
-    </div>
-</div>
+@yield('content')
 <script type="text/javascript" src="{{asset('js/app.js')}}"></script>
 @yield('scripts')
 </body>
